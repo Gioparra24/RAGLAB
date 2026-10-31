@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casos COVID-19 reportados en Boyacá</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:1050px;margin:2rem auto;padding:0 1rem;color:#17212b;line-height:1.55}
+h1,h2{color:#075985} .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card,section{border:1px solid #d9e2ec;border-radius:10px;padding:1rem;margin:1rem 0;background:#fff}
+.metric{font-size:1.35rem;font-weight:700} img{width:100%;height:auto} small{color:#475569}
+</style></head><body>
+<h1>Casos positivos de COVID-19 reportados en Boyacá</h1>
+<p><strong>Pregunta:</strong> ¿Cómo evolucionó mes a mes el número de casos reportados?</p>
+<p><strong>Departamento:</strong> Boyacá (normalizado como <code>BOYACA</code>) ·
+<strong>Periodo observado tras limpieza:</strong> 2020-03-25 a 2024-01-17.</p>
+<div class="cards">
+<div class="card"><small>Casos únicos con fecha válida en el periodo</small><div class="metric">131,133</div></div>
+<div class="card"><small>Variación frente al mes anterior (último mes comparable)</small><div class="metric">+122.2% en el último mes comparable</div></div>
+</div>
+<section><h2>Hallazgo</h2><p>El mes con más casos dentro del periodo fue 2021-06, con 22,400 casos únicos reportados.</p></section>
+<section><h2>Evolución mensual</h2><img src="graficos/casos_mensuales.png" alt="Gráfico de líneas de casos únicos por mes"></section>
+<section><h2>Distribución territorial</h2><img src="graficos/casos_por_municipio.png" alt="Gráfico de barras de los diez municipios con más casos"></section>
+<section><h2>Cómo se calcularon</h2><p>Se seleccionó <code>Nombre departamento</code> tras quitar espacios y normalizar mayúsculas.
+La fecha de agrupación es <code>fecha reporte web</code>, convertida a fecha con errores convertidos en valores ausentes.
+Se contaron IDs únicos en cada mes calendario y por municipio; se excluyeron registros sin fecha válida, sin ID de caso o con ID repetido (se conserva la primera aparición). El tablero presenta 47 meses con registros.</p>
+<p><strong>Limitaciones de limpieza:</strong> 0 fechas inválidas, 0 IDs vacíos y 0 filas con ID repetido en Boyacá fueron excluidos. Municipios vacíos identificados: 0. Los meses calendario sin casos se incluyen como cero.</p>
+<p><strong>Perfil del archivo:</strong> 131,133 filas, 23 columnas, 0 filas exactamente duplicadas; faltantes por columna:</p><ul><li><code>fecha reporte web</code>: 0</li>
+<li><code>ID de caso</code>: 0</li>
+<li><code>Fecha de notificación</code>: 0</li>
+<li><code>Código DIVIPOLA departamento</code>: 0</li>
+<li><code>Nombre departamento</code>: 0</li>
+<li><code>Código DIVIPOLA municipio</code>: 0</li>
+<li><code>Nombre municipio</code>: 0</li>
+<li><code>Edad</code>: 0</li>
+<li><code>Unidad de medida de edad</code>: 0</li>
+<li><code>Sexo</code>: 0</li>
+<li><code>Tipo de contagio</code>: 0</li>
+<li><code>Ubicación del caso</code>: 1,089</li>
+<li><code>Estado</code>: 1,089</li>
+<li><code>Código ISO del país</code>: 131,113</li>
+<li><code>Nombre del país</code>: 131,113</li>
+<li><code>Recuperado</code>: 1,022</li>
+<li><code>Fecha de inicio de síntomas</code>: 834</li>
+<li><code>Fecha de muerte</code>: 127,122</li>
+<li><code>Fecha de diagnóstico</code>: 5</li>
+<li><code>Fecha de recuperación</code>: 4,076</li>
+<li><code>Tipo de recuperación</code>: 4,077</li>
+<li><code>Pertenencia étnica</code>: 114</li>
+<li><code>Nombre del grupo étnico</code>: 130,779</li></ul>
+<p>La fecha de reporte no equivale necesariamente a la fecha de contagio o inicio de síntomas. Estos datos describen los registros contenidos en el CSV y no deben interpretarse por sí solos como incidencia real ni como cobertura completa de casos.</p></section>
+<section><h2>Fuente</h2><p><a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Casos-positivos-de-COVID-19-en-Colombia-/gt2j-8ykr/about_data">Portal Nacional de Datos Abiertos: Casos positivos de COVID-19 en Colombia</a></p>
+<p><strong>Indicadores:</strong> total de casos únicos válidos en el periodo y variación porcentual mensual respecto al mes anterior (no calculable si el mes previo es cero).</p>
+<p><strong>Alcance del archivo:</strong> este CSV contiene 131,133 filas y un único valor observado de departamento. Los resultados representan el archivo local suministrado, no necesariamente la totalidad nacional del conjunto publicado.</p></section>
+</body></html>
